@@ -6,9 +6,18 @@
   list-style: none;
   text-decoration: none;
   color: inherit;
+  color: var(--BleuSombre);
 }
 
-html{
+h1,
+h2,
+h3,
+a {
+  letter-spacing: 2px;
+  /* espace de 2 pixels entre chaque lettre */
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -45,7 +54,7 @@ Variables
 
 :root {
   --gap: 32px;
-  --BleuSombre: #011627;
+  --BleuSombre: #022f54;
   --BlancGhost: #FBFBFF;
   --Secondaire: #3C3C3C;
 }
@@ -407,11 +416,26 @@ Boutons
   font-family: "Alta";
   font-size: 17px;
   color: var(--BlancGhost);
+  border: var(--BleuSombre) solid 1px;
+  transition: all 0.7s ease;
 
   a {
     color: var(--BlancGhost);
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: var(--BlancGhost);
+    color: var(--BleuSombre);
+    border: 1px solid var(--BleuSombre);
+    transition: all 0.7s ease;
+
+    a {
+      color: var(--BleuSombre);
+    }
   }
 }
+
 
 .CTA2 {
   background-color: var(--BlancGhost);
@@ -420,10 +444,28 @@ Boutons
   font-size: 17px;
   color: var(--BleuSombre);
   border: var(--BleuSombre) solid 1px;
+  transition: all 0.7s ease;
 
   a {
     color: var(--BlancGhost);
   }
+
+  &:hover {
+    background-color: var(--BleuSombre);
+    padding: 13px 20px;
+    font-family: "Alta";
+    font-size: 17px;
+    color: var(--BlancGhost);
+    border: none;
+    transition: all 0.7s ease;
+    border: var(--BleuSombre) solid 1px;
+
+    a {
+      color: var(--BlancGhost);
+      text-decoration: none;
+    }
+  }
+
 }
 
 
@@ -436,7 +478,7 @@ HEADER
 header {
   background-color: var(--BlancGhost);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
-  padding: 40px;
+  padding: 20px;
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -487,15 +529,22 @@ footer {
     font-family: "Alta";
     font-size: 29px;
     color: var(--BlancGhost);
+    letter-spacing: 2px;
   }
 }
+
+input::placeholder {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 
 .inputFooter {
   background-color: var(--BlancGhost);
 }
 
 input {
-  padding: 20px 100px;
+  padding: 20px 160px 20px 5px;
 }
 
 
@@ -505,6 +554,7 @@ input {
   p {
     font-family: "Alta";
     font-size: 15px;
+    letter-spacing: 2px;
   }
 }
 
@@ -539,14 +589,10 @@ Hero Page 1 & 2
 
 .texteHero {
   position: absolute;
-  top: 30%;
+  top: 24%;
   left: 75%;
   transform: translate(-50%, -50%);
 }
-
-
-
-
 
 
 
@@ -567,7 +613,7 @@ Section Content
     font-family: "Alta";
     font-size: 32px;
     font-weight: 100;
-    border-bottom: #011627 solid 1px;
+    border-bottom: #022F54 solid 1px;
     display: inline;
 
   }
@@ -582,9 +628,15 @@ Section Content
 
 /* Content Droite */
 
-.contentDroite {
+.exposed {
+  transition: 0.5s ease;
+}
+
+.exposed:hover {
+  filter: brightness(0.5);
 
 }
+
 
 
 
@@ -611,9 +663,7 @@ Section Choix
 ---------------------------------------------------*/
 
 
-.sectionChoix {
-
-}
+.sectionChoix {}
 
 
 
@@ -622,14 +672,14 @@ Section Choix
 
   h2 {
     font-family: "Alta";
-    font-size: 32px;
+    font-size: 1.875vw;
     font-weight: 100;
     margin-bottom: 80px;
   }
 
   p {
     font-family: "Georgia";
-    font-size: 24px;
+    font-size: 1.275vw;
     font-weight: 100;
     margin-bottom: 80px;
   }
@@ -718,7 +768,149 @@ input
 
 
 /* demander a nicolas */
-.test{
-  height: 100px;
+.test {
+  height: 20px;
   width: auto;
 }
+
+
+
+
+
+/* Section Contact */
+
+.infoContact {
+  h2 {
+    font-family: "Alta";
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: "Georgia";
+    font-size: 18px;
+    margin-bottom: 118px;
+  }
+}
+
+
+.contact {
+
+  div {
+    margin-bottom: 44px;
+  }
+
+  p {
+    font-family: "Georgia";
+    font-size: 16px;
+
+  }
+}
+
+
+.form {
+  padding: 150px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.131);
+
+  p {
+    font-family: "Georgia";
+  }
+}
+
+
+
+.input-underline {
+  border: none;
+  border-bottom: 1px solid var(--Secondaire);
+  outline: none;
+  font-size: 16px;
+  padding: 8px 0;
+  width: 300px;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.input-underline:focus {
+  border-bottom-color: #000000;
+}
+
+
+.inputContact {
+  margin-bottom: 50px;
+
+  p {
+    color: var(--Secondaire);
+    font-family: "Georgia";
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+.input-underlineMessage {
+  border: none;
+  border-bottom: 1px solid var(--Secondaire);
+  outline: none;
+  font-size: 16px;
+  padding: 8px 0;
+  width: 38.80vw;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.input-underlineMessage:focus {
+  border-bottom-color: #000000;
+}
+
+
+.inputContactMessage {
+  margin-bottom: 50px;
+
+  p {
+    color: var(--Secondaire);
+    font-family: "Georgia";
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+.choixContac {
+
+  p {
+    font-family: "Georgia";
+    font-size: 16px;
+  }
+}
+
+
+.sujet {
+  margin-bottom: 20px;
+}
+
+
+.check-circle {
+  width: 17px;
+  height: 17px;
+  border: var(--BleuSombre) solid 1px;
+  background-color: var(--BlancGhost);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.check-circle svg {
+  width: 10px;
+  height: 10px;
+  fill: var(--BlancGhost);
+}
+
+.check-circle.selected {
+  background-color: var(--BleuSombre);
+}
+
