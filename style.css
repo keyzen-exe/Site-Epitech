@@ -480,7 +480,8 @@ header {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
   padding: 20px;
   width: 100%;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 999;
 
   img {
@@ -913,4 +914,22 @@ input
 .check-circle.selected {
   background-color: var(--BleuSombre);
 }
+
+.carouselImg{
+  height: 200px;
+
+}
+
+.map{
+  height: 500px;
+}
+
+
+  h2{
+    font-family: "Alta";
+    font-size: 28px;
+  }
+
+
+
 

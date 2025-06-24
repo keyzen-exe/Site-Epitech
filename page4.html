@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -17,14 +23,14 @@
     <!-- Header -->
     <header class="flex justify-between">
 
-        <h2>EDEN</h2>
+        <h2><a href="index.html">EDEN</a></h2>
 
         <nav>
             <ul class="flex gap">
                 <li><a href="">ACHETER</a></li>
-                <li><a href="">LOUER</a></li>
                 <li><a href="">VENDRE</a></li>
                 <li><a href="">AGENCES</a></li>
+                <li><a href="page4.html">CONTACT</a></li>
             </ul>
         </nav>
 
@@ -39,9 +45,7 @@
 
     <main>
 
-        <div class="test">
-            d
-        </div>
+
 
         <section class="container marginT150">
 
@@ -201,16 +205,35 @@
                     </div>
 
 
-                   
-                    
+
+
                 </div>
-                
 
 
-                
+
+
             </div>
 
-            
+
+        </section>
+
+
+
+
+        <section class="container">
+
+            <div class="form">
+                <div class="container flex justify-center">
+                    <h2 class="agence">Venir nous voir sur place.</h2>
+                </div>
+
+
+                <div id="map" class="map large-6">
+                    <!-- map -->
+                </div>
+            </div>
+
+
         </section>
 
 
